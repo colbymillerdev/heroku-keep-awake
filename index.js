@@ -14,7 +14,6 @@ const wakeDyno = (url, options = {}) => {
 
 const wakeDynos = (urls, options = {}) => {
   const { interval = 29, logging = true } = options;
-  console.log(interval);
   const milliseconds = interval * 60000;
 
   setTimeout(() => {
