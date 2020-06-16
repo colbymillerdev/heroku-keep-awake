@@ -1,0 +1,26 @@
+{
+  "name": "heroku-keep-awake",
+  "version": "1.0.0",
+  "description": "Simple lightweight utility to help keep Heroku app awake by pinging the Dynos at a set interval.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "heroku",
+    "node",
+    "dynos",
+    "awake",
+    "utility",
+    "keep-awake",
+    "server",
+    "uptime",
+    "hosting",
+    "javascript"
+  ],
+  "author": "Colby Miller",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
