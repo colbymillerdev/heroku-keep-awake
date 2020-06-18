@@ -1,6 +1,6 @@
 {
   "name": "heroku-keep-awake",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple lightweight utility to help keep Heroku app awake by pinging the Dynos at a set interval.",
   "main": "index.js",
   "scripts": {
