@@ -25,6 +25,7 @@
   "author": "Colby Miller",
   "license": "MIT",
   "dependencies": {
+    "moment": "^2.27.0",
     "node-fetch": "^2.6.0"
   }
 }
