@@ -54,25 +54,40 @@ app.listen(PORT, () => {
 })
 ```
 
-The functions also accept an optional options object for setting a desired interval (in minutes) or disabling logging.
+The functions also accept an optional options object for setting a desired interval (in minutes), disabling logging, or specifying stop times when dynos shouldn't be kept awake.
 
 ```
 const DYNO_URL = 'https://my-app.herokuapp.com';
 
 const opts = {
     interval: 29,
-    logging: false
+    logging: false,
+    stopTimes: { start: '00:00', '06:00' }
 }
 
 wakeDyno(DYNO_URL, opts);
 ```
 
+## Stop Times
+
+Stop Times is a feature that prevents the utility from pinging the Heroku applications during a specific timeframe. This is useful when wanting to allow your apps to sleep and not use up your "Free Dyno Hours".
+
+The `stopTimes` object must include both a `stop` and `end` time property. These times should be specified in 24 Hour Time (Military Time) format.
+
+```
+// Examples:
+
+stopTimes = { start: '00:00', end: '06:00' } // 12am to 6am
+stopTimes = { start: '12:00', end: '18:00' } // 12pm to 6pm
+```
+
 ## Documentation
 
-| Name     | Description                                                              | Default | Type    |
-| -------- | ------------------------------------------------------------------------ | ------- | ------- |
-| interval | Interval, in minutes, that the Heroku Dyno should be pinged.             | 29      | Number  |
-| logging  | Turn off the logging that logs whether the calls were successful or not. | true    | Boolean |
+| Name      | Description                                                                 | Default | Type    |
+| --------- | --------------------------------------------------------------------------- | ------- | ------- |
+| interval  | Interval, in minutes, that the Heroku Dyno should be pinged.                | 29      | Number  |
+| logging   | Turn off the logging that logs whether the calls were successful or not.    | true    | Boolean |
+| stopTimes | Object used to specify a start/end time to not ping the Heroku applications | {}      | Object  |
 
 ## Contributing
 
