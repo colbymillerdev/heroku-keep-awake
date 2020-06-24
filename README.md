@@ -4,7 +4,7 @@
 
 Simple lightweight utility to help keep Heroku apps awake by pinging the Dynos at a set interval.
 
-***Disclaimer:** This utility will only work with Heroku until you run out of "Free Dyno Hours" for the month. I'd suggest upgrading to a paid tier if you're hosting an app on Heroku whose uptime is important* 🙂 *(https://devcenter.heroku.com/articles/free-dyno-hours#managing-your-free-dyno-usage)*
+**\*Disclaimer:** This utility will only work with Heroku until you run out of "Free Dyno Hours" for the month. I'd suggest upgrading to a paid tier if you're hosting an app on Heroku whose uptime is important* 🙂 *(https://devcenter.heroku.com/articles/free-dyno-hours#managing-your-free-dyno-usage)\*
 
 ## Installation
 
@@ -62,7 +62,7 @@ const DYNO_URL = 'https://my-app.herokuapp.com';
 const opts = {
     interval: 29,
     logging: false,
-    stopTimes: { start: '00:00', '06:00' }
+    stopTimes: { start: '00:00', end: '06:00' }
 }
 
 wakeDyno(DYNO_URL, opts);
@@ -70,7 +70,7 @@ wakeDyno(DYNO_URL, opts);
 
 ## Stop Times
 
-Stop Times is a feature that prevents the utility from pinging the Heroku applications during a specific timeframe. This is useful when wanting to allow your apps to sleep and not use up your "Free Dyno Hours".
+Stop Times is a feature that prevents the utility from pinging the Heroku applications during a specific timeframe. This is useful when wanting to allow apps to sleep and not use up the Free Dyno Hours.
 
 The `stopTimes` object must include both a `stop` and `end` time property. These times should be specified in 24 Hour Time (Military Time) format.
 
