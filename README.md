@@ -4,7 +4,7 @@
 
 Simple lightweight utility to help keep Heroku apps awake by pinging the Dynos at a set interval.
 
-**\*Disclaimer:** This utility will only work with Heroku until you run out of "Free Dyno Hours" for the month. I'd suggest upgrading to a paid tier if you're hosting an app on Heroku whose uptime is important* 🙂 *(https://devcenter.heroku.com/articles/free-dyno-hours#managing-your-free-dyno-usage)\*
+***Disclaimer:** This utility will only work with Heroku until you run out of "Free Dyno Hours" for the month. I'd suggest upgrading to a paid tier if you're hosting an app on Heroku whose uptime is important* 🙂 *(https://devcenter.heroku.com/articles/free-dyno-hours#managing-your-free-dyno-usage)*
 
 ## Installation
 
